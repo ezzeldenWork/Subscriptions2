@@ -1,0 +1,81 @@
+.aside-box{
+    position: fixed;
+    padding: 14px 0;
+    top: 0;
+    @extend%trans-4;
+    bottom: 0;
+    background: linear-gradient(176deg, rgba(255,255,255,1) 0%, rgba($gray-color, 1) 100%);
+    z-index: 8888;
+    min-width: 250px;
+    box-shadow: -11px 1px 11px rgba($black-color,  .1);
+    html[dir="rtl"] & {
+        right: -500px;
+    }
+    html[dir="ltr`"] & {
+        left: -500px;
+    }
+    .ul-box{
+        padding:0 0  20px  0;
+        .aside-title{
+            padding: 0 18px 10px 0px;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba($min-color,  1.0);
+        }
+    .aside-ul{
+        li{
+            margin: 4px 0;
+            position: relative;
+            .sub-menu{
+                padding : 4px 0 10px 0;
+                display: none;
+                li{
+                    a{
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            a{
+                min-height: 44px;
+                padding: 9px 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 600;
+                @extend%trans-4;
+                color:rgba($black-color,  1.0);
+                opacity: 0.9;
+                &:hover,&.active{
+                    opacity: 1;
+                background-color: rgba($black-color,  .05);
+                color:rgba($sub_color,  1.0);
+                }
+                i{
+                    padding: 0 6px;
+                    opacity: 0.5;
+                }
+                .frist-box{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        }
+    }
+
+
+
+}
+
+
+.opneMenu{
+    html[dir="rtl"] & {
+        right: 0px !important;
+    }
+    html[dir="ltr`"] & {
+        left: 0px !important;
+    }
+}
