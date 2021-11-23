@@ -98,46 +98,46 @@ $(document).ready(function () {
       var tr = $(this).closest("tr"),
           row = table.row(tr);
 
-      // if ( row.child.isShown() ) {
-      //   // This row is already open - close it
-      //     debugger;
-      //     row.child.hide();
-      //     tr.removeClass('shown');
-      //   }
-      // else {
+      if ( row.child.isShown() ) {
+        // This row is already open - close it
+          debugger;
+          row.child.hide();
+          tr.removeClass('shown');
+        }
+      else {
       debugger;
       // Open this row
       row.child(format(row.data())).show();
       tr.addClass("shown");
-      // }
+      }
   });
 
   function format(d) {
-      //     debugger;
-      //     // `d` is the original data object for the row
-      //     return '<table class="sucond_table" cellpadding="5" cellspacing="0" border="0" style="width: 100%;">'+
-      //         '<tr >'+
-      //         '<th class="sorting sorting_asc" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 20%;" aria-sort="ascending">     الاسم </th>' +
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;">الكود</th>'+
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;">     تاريخ البداية </th>' +
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%;">تاريخ النهايه</th>' +
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 10%;">العدد</th>' +
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">النوع</th>' +
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">النوع</th>' +
-      //         '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">النوع</th>' +
-      //         '</tr>'+
-      //         '<tr>'+
-      //             '<td>'+d.extn+'</td>'+
-      //             '<td>'+d.name+'</td>'+
-      //             '<td>فرد</td>'+
-      //             '<td>'+d.extn+'</td>'+
-      //             '<td>'+d.name+'</td>'+
-      //             '<td>فرد</td>'+
-      //             '<td class="has_link">'+'<a href="#" class="table_link">الفواتير</a>'+'</td>'+
-      //             '<td class="has_link">'+ '<a href="#" class="table_link">الفواتير</a>' +'</td>'+
-      //             '</tr>'+
-      //     '</table>'+
-      //     '<hr>';
+          debugger;
+          // `d` is the original data object for the row
+          return '<table class="sucond_table" cellpadding="5" cellspacing="0" border="0" style="width: 100%;">'+
+              '<tr >'+
+              '<th class="sorting sorting_asc" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 20%;" aria-sort="ascending">     الاسم </th>' +
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;">الكود</th>'+
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;">     تاريخ البداية </th>' +
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%;">تاريخ النهايه</th>' +
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 10%;">العدد</th>' +
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">النوع</th>' +
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">النوع</th>' +
+              '<th class="sorting" tabindex="0" aria-controls="statustTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">النوع</th>' +
+              '</tr>'+
+              '<tr>'+
+                  '<td>'+d.extn+'</td>'+
+                  '<td>'+d.name+'</td>'+
+                  '<td>فرد</td>'+
+                  '<td>'+d.extn+'</td>'+
+                  '<td>'+d.name+'</td>'+
+                  '<td>فرد</td>'+
+                  '<td class="has_link">'+'<a href="#" class="table_link">الفواتير</a>'+'</td>'+
+                  '<td class="has_link">'+ '<a href="#" class="table_link">الفواتير</a>' +'</td>'+
+                  '</tr>'+
+          '</table>'+
+          '<hr>';
   }
 
 
